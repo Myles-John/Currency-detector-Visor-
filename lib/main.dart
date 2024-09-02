@@ -13,7 +13,7 @@ class CurrencyDetectorApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Currency Detector',
-      theme: ThemeData(
+      theme: ThemeData(appBarTheme: const AppBarTheme(backgroundColor: Colors.yellow),
         primarySwatch: Colors.blue,
       ),
       home: HomeScreen(),

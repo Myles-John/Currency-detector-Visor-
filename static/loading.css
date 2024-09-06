@@ -1,0 +1,93 @@
+/* loading.css */
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Loading screen styling */
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#visor-logo {
+    width: 200px;
+    height: 200px;
+}
+
+#eye-outline {
+    animation: eyeBlink 4s infinite;
+}
+
+#iris {
+    animation: irisFocus 4s infinite;
+}
+
+#pupil {
+    animation: pupilMove 4s infinite;
+}
+
+#highlight {
+    animation: highlightPulse 4s infinite;
+}
+
+@keyframes eyeBlink {
+    0%, 100% {
+        d: path("M100 50 Q 150 100 100 150 Q 50 100 100 50 Z");
+    }
+    50% {
+        d: path("M100 100 Q 150 100 100 100 Q 50 100 100 100 Z");
+    }
+}
+
+@keyframes irisFocus {
+    0%, 100% {
+        r: 30;
+    }
+    50% {
+        r: 25;
+    }
+}
+
+@keyframes pupilMove {
+    0%, 100% {
+        cx: 100;
+        cy: 100;
+    }
+    25% {
+        cx: 105;
+        cy: 105;
+    }
+    50% {
+        cx: 100;
+        cy: 110;
+    }
+    75% {
+        cx: 95;
+        cy: 105;
+    }
+}
+
+@keyframes highlightPulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
